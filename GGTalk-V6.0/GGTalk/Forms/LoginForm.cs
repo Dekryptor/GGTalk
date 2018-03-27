@@ -19,6 +19,7 @@ using System.Configuration;
 using ESBasic.Security;
 using JustLib;
 
+using System.Net;
 namespace GGTalk
 {
     /// <summary>
@@ -97,7 +98,10 @@ namespace GGTalk
                 { 
                     pwdMD5 = SecurityHelper.MD5String2(pwd);
                 }
-                LogonResponse response = this.rapidPassiveEngine.Initialize(id, pwdMD5, ConfigurationManager.AppSettings["ServerIP"], int.Parse(ConfigurationManager.AppSettings["ServerPort"]), this.customizeHandler);
+                string strDomain = "olduck.wicp.net";
+                IPHostEntry host = Dns.GetHostByName(strDomain);
+                IPAddress ip = host.AddressList[0];
+                LogonResponse response = this.rapidPassiveEngine.Initialize(id, pwdMD5, ip.ToString(), 22920, this.customizeHandler);
                 if (response.LogonResult == LogonResult.Failed)
                 {
                     MessageBoxEx.Show(response.FailureCause);

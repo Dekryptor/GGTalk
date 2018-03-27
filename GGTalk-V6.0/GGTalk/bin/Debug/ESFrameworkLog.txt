@@ -1,8 +1,6 @@
 
-2018/3/26 14:28:16 : 普通 －－ Timeout waiting for reply! [:]    在 CsY2uqtivNSCfiXAZCX.NUCrfutqBtxwIfKBbc4.PickupResponse(Int32  , Int32  )
-   在 Q8MaCmtl1Jc7iToeXNH.NbU4fStNoex5vWE8M4G.zFUNUvKFQ2(Aa11Lpb3DRMoQAeLPng  , Nullable`1 resKey)
-   在 zyKaTit74UV1WCXuIVM.fM1vqgtRvt8L433XIM1.UyHNFewy3S()
-   在 y1txxL1yg7T0tDHJpnZ.Xkr5Fs1v3QAMYP8h6oG.DYEL5M5Pd27ljnmO3ri(Object )
-   在 y1txxL1yg7T0tDHJpnZ.Xkr5Fs1v3QAMYP8h6oG.yiBWzivIBR()
-   在 ESBasic.Helpers.EventHelper.SpringEventSafely(IAgileLogger agileLogger, String eventPath, Delegate theEvent) 。错误类型:System.TimeoutException。位置：y1txxL1yg7T0tDHJpnZ.Xkr5Fs1v3QAMYP8h6oG.yiBWzivIBR() On handle event [ESFramework.Engine.Tcp.Passive.TcpEngine.ConnectionRebuildSucceed].
+2018/3/27 星期二 上午 12:14:19 : 普通 －－ 未能找到文件“C:\Users\Administrator\Documents\Duplicate Cleaner log.txt”。 [:]    在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   在 IvnqxLbSuad1tOeG7JA.oq6eF8bTpykZCgs98ia.vwlbF3NSfL() 。错误类型:System.IO.FileNotFoundException。位置：ESPlus.FileTransceiver.FileSender.DoSend
 
