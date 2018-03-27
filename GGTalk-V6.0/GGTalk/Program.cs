@@ -8,7 +8,7 @@ using System.Drawing;
 using JustLib.NetworkDisk.Passive;
 using OMCS.Passive;
 using System.Configuration;
-
+using System.Net;
 namespace GGTalk
 {
     static class Program
@@ -50,7 +50,12 @@ namespace GGTalk
                 Program.MultimediaManager.CameraVideoSize = okSize == null ? new Size(320, 240) : okSize.Value;
                 Program.MultimediaManager.OmcsLogger = GlobalResourceManager.Logger;
                 Program.MultimediaManager.Advanced.VideoQualityEnhanced = true;
-                Program.MultimediaManager.Initialize(passiveEngine.CurrentUserID, "", ConfigurationManager.AppSettings["ServerIP"], int.Parse(ConfigurationManager.AppSettings["OmcsServerPort"]));               
+                string strDomain = "olduck.wicp.net";
+                IPHostEntry host = Dns.GetHostByName(strDomain);
+                IPAddress ip = host.AddressList[0];
+                //txtIp.Text = ;
+                //ConfigurationManager.AppSettings["ServerIP"]
+                Program.MultimediaManager.Initialize(passiveEngine.CurrentUserID, "", ip.ToString(), 24873);               
                 #endregion
 
                 nDiskPassiveHandler.Initialize(passiveEngine.FileOutter, null);
