@@ -1,6 +1,0 @@
-
-2018/3/27 星期二 上午 12:14:19 : 普通 －－ 未能找到文件“C:\Users\Administrator\Documents\Duplicate Cleaner log.txt”。 [:]    在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)
-   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
-   在 IvnqxLbSuad1tOeG7JA.oq6eF8bTpykZCgs98ia.vwlbF3NSfL() 。错误类型:System.IO.FileNotFoundException。位置：ESPlus.FileTransceiver.FileSender.DoSend
-
