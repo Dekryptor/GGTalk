@@ -26,9 +26,11 @@ import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
 import gg.dragon.persondata.ContactsInfo;
 import gg.example.utils.SerializeHelper;
 import gg.model.ChatContentContract;
@@ -42,8 +44,8 @@ public class ContactsListExpandable extends Activity implements ChatApplication.
     int[] photoRes = {R.drawable.contact_0, R.drawable.contact_1, R.drawable.contact_2, R.drawable.contact_3};
     String[] groupFrom = {"groupImage", "groupName", "childCount"};
     int[] groupTo = {R.id.groupImage, R.id.groupName, R.id.childCount};
-    String[] childFrom = {"userImage", "userName", "userSign","unReadMessage"};
-    int[] childTo = {R.id.ct_photo, R.id.ct_name, R.id.ct_sign,R.id.unReadMessage};
+    String[] childFrom = {"userImage", "userName", "userSign", "unReadMessage"};
+    int[] childTo = {R.id.ct_photo, R.id.ct_name, R.id.ct_sign, R.id.unReadMessage};
     ArrayList<HashMap<String, Object>> groupData = null;
     ArrayList<ArrayList<HashMap<String, Object>>> childData = null;
     ArrayList<HashMap<String, Object>> groupItenformation = null;  //用于存放groupItem的相对位置
@@ -67,19 +69,31 @@ public class ContactsListExpandable extends Activity implements ChatApplication.
      * 方法：需要使用onTouchEvent方法，这个比用onScrollView方法靠谱
      */
     private boolean isChecking = false;
-
-    @Override
-    public void ChatMessageReceived(String sourceUserID, ChatContentContract chatContent) {
-        if(app.getChatContentListenerCount(sourceUserID)==1) {
-            edithandler.sendMessage(new Message());
-        }
-    }
     private Handler edithandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
             adapter.notifyDataSetChanged();
         }
     };
+
+    @Override
+    public void ChatMessageReceived(String sourceUserID, ChatContentContract chatContent) {
+        if (app.getChatContentListenerCount(sourceUserID) == 1) {
+            edithandler.sendMessage(new Message());
+        }
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        //按返回键返回桌面
+//        Intent intent = new Intent(Intent.ACTION_MAIN);
+//        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//        intent.addCategory(Intent.CATEGORY_HOME);
+//        startActivity(intent);
+
+        moveTaskToBack(true);
+    }
 
     @Override
     protected void onDestroy() {
@@ -91,11 +105,11 @@ public class ContactsListExpandable extends Activity implements ChatApplication.
 //        }
 //        app.RemoveFriendStatusChangedListener(this);
 
-        for(ArrayList<HashMap<String, Object>> entry:childData)
-        {
+        for (ArrayList<HashMap<String, Object>> entry : childData) {
             app.RemoveChatMessageListener(entry.get(0).get("userID").toString(), this);
         }
 
+//        app.getEngine().close();
     }
 
     private void AddChatEvent(String userID) {
@@ -124,8 +138,8 @@ public class ContactsListExpandable extends Activity implements ChatApplication.
                 // TODO Auto-generated method stub
                 Intent intent = new Intent();
                 intent.setClass(ContactsListExpandable.this, ChatActivity.class);
-                String talkingUserID=childData.get(0).get((int) id).get("userID").toString();
-                String talkingUserName=childData.get(0).get((int) id).get("userName").toString();
+                String talkingUserID = childData.get(0).get((int) id).get("userID").toString();
+                String talkingUserName = childData.get(0).get((int) id).get("userName").toString();
                 intent.putExtra("TalkingUserID", talkingUserID);
                 intent.putExtra("TalkingUserName", talkingUserName);
                 app.setHaveNewChatContent(talkingUserID, false);
@@ -231,7 +245,7 @@ public class ContactsListExpandable extends Activity implements ChatApplication.
         } catch (Exception ee) {
 
         }
-        byte[] returnValue =app.getEngine().getCustomizeOutter().query(ContractType.GETALLCONTRACTS.getType(), userBytes);
+        byte[] returnValue = app.getEngine().getCustomizeOutter().query(ContractType.GETALLCONTRACTS.getType(), userBytes);
 
         List<GGUser> userList = null;
         try {
@@ -242,9 +256,8 @@ public class ContactsListExpandable extends Activity implements ChatApplication.
 
         app.setMyFriendUserInfo(userList);
 
-        for(int i=0;i<userList.size();i++)
-        {
-            ContactsInfo user=new ContactsInfo(userList.get(i));
+        for (int i = 0; i < userList.size(); i++) {
+            ContactsInfo user = new ContactsInfo(userList.get(i));
             addUser(user);
         }
     }
@@ -429,12 +442,9 @@ public class ContactsListExpandable extends Activity implements ChatApplication.
             holder.userImage.setOnClickListener(new ImageClickListener(holder));
 
             //if(!app.IsHaveNewChatContent(childData.get(groupPosition).get(childPosition).get("userID").toString()))
-            if(!app.IsHaveNewChatContent(childData.get(groupPosition).get(childPosition).get("userID").toString()))
-            {
+            if (!app.IsHaveNewChatContent(childData.get(groupPosition).get(childPosition).get("userID").toString())) {
                 holder.bezierView.setVisibility(View.INVISIBLE);
-            }
-            else
-            {
+            } else {
                 holder.bezierView.setVisibility(View.VISIBLE);
             }
 
@@ -584,7 +594,7 @@ public class ContactsListExpandable extends Activity implements ChatApplication.
             ImageButton userImage = null;
             TextView userName = null;
             TextView userSign = null;
-            BezierView bezierView=null;
+            BezierView bezierView = null;
         }
 
         /**

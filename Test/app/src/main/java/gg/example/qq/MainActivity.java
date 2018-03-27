@@ -3,6 +3,7 @@ package gg.example.qq;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.LayoutInflater;
@@ -53,7 +54,7 @@ public class MainActivity extends Activity {
     ImageButton listIndicatorButton = null, deleteButtonOfEdit = null;
     ImageView currentUserImage = null;
     ListView loginList = null;
-    EditText qqEdit = null, passwordEdit = null,ipEdit=null,portEdit=null;
+    EditText qqEdit = null, passwordEdit = null, ipEdit = null, portEdit = null;
     String[] from = {"userPhoto", "userQQ", "deletButton"};
     //用于记录当前选择的ListView中的QQ联系人条目的ID，如果是-1表示没有选择任何QQ账户，注意在向
     //List中添加条目或者删除条目时都要实时更新该currentSelectedPosition
@@ -72,7 +73,14 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-       // configLog();
+//        Boolean isLogged = MyTools.isLogged(LoginActivity.this);
+//        if(isLogged){
+//            Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+//            startActivity(intent);
+//            finish();//关闭当前登录界面，否则在主界面按后退键还会回到登录界面
+//        }
+
+        // configLog();
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 
@@ -86,8 +94,8 @@ public class MainActivity extends Activity {
         list = new ArrayList<HashMap<String, Object>>();
         currentUserImage = (ImageView) findViewById(R.id.myImage);
         qqEdit = (EditText) findViewById(R.id.qqNum);
-        ipEdit=(EditText)findViewById(R.id.ip);
-        portEdit=(EditText)findViewById(R.id.port);
+        ipEdit = (EditText) findViewById(R.id.ip);
+        portEdit = (EditText) findViewById(R.id.port);
         passwordEdit = (EditText) findViewById(R.id.qqPassword);
         deleteButtonOfEdit = (ImageButton) findViewById(R.id.delete_button_edit);
 
@@ -109,7 +117,7 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 currentUserImage.setImageResource(R.drawable.qqmain);
-                qqEdit.setText("");
+                //qqEdit.setText("");
                 currentSelectedPosition = -1;
                 deleteButtonOfEdit.setVisibility(View.GONE);
 
@@ -122,7 +130,7 @@ public class MainActivity extends Activity {
         //设置当前显示的被选中的账户的头像
         if (currentSelectedPosition == -1) {
             currentUserImage.setImageResource(R.drawable.qqmain);
-            qqEdit.setText("");
+            //qqEdit.setText("");
         } else {
             currentUserImage.setImageResource((Integer) list.get(currentSelectedPosition).get(from[0]));
             qqEdit.setText((String) list.get(currentSelectedPosition).get(from[1]));
@@ -155,7 +163,7 @@ public class MainActivity extends Activity {
                     isVisible = false;
                     listIndicatorButton.setBackgroundResource(R.drawable.indicator_down);
                     loginList.setVisibility(View.GONE);   //让ListView列表消失
-                } else {
+//                } else {
                     isIndicatorUp = true;
                     isVisible = true;
                     listIndicatorButton.setBackgroundResource(R.drawable.indicator_up);
@@ -170,10 +178,29 @@ public class MainActivity extends Activity {
             public void onClick(View arg0) {
                 // TODO Auto-generated method stub
 //115.29.208.205
-                login(qqEdit.getText().toString(), StringHelper.md5(passwordEdit.getText().toString()),
-                        ipEdit.getText().toString(),Integer.parseInt(portEdit.getText().toString()));//192.168.3.50
+
+                login(qqEdit.getText().toString(), StringHelper.md5(passwordEdit.getText().toString()));//192.168.3.50
             }
         });
+
+
+        if (isLogin()) {
+            return;
+        }
+    }
+
+    private boolean isLogin() {
+        String user_id = null;
+        SharedPreferences sharedPreferences =
+                getApplication().getSharedPreferences("user", Context.MODE_PRIVATE);
+        user_id = sharedPreferences.getString("user_id", "null");
+        String pwd = sharedPreferences.getString("pwd", "null");
+        if (!user_id.equalsIgnoreCase("null"))
+        {
+            login(user_id, pwd);
+            return true;
+        }
+        return false;
     }
 
     //继承onTouchEvent方法，用于实现点击控件之外的部分使控件消失的功能
@@ -213,12 +240,14 @@ public class MainActivity extends Activity {
         return super.onTouchEvent(event);
     }
 
-    private void login(final String username, final String password, final String ip, final int port) {
+    private void login(final String username, final String password) {
         new Thread(new Runnable() {
             @Override
             public void run() {
                 final ChatApplication app = (ChatApplication) getApplication();
 
+                String ip = "olduck.wicp.net";
+                int port = 22920;
                 if (app.getEngine() != null) {
                     app.getEngine().close();
                     app.clearChart();
@@ -238,6 +267,17 @@ public class MainActivity extends Activity {
                 }
                 if (resp != null && resp.getLogonResult() == 0) {
                     if (resp.getLogonResult() == 0) {
+
+                        //SharedPreferences 保存数据的实现代码
+                        SharedPreferences sharedPreferences =
+                                getApplication().getSharedPreferences("user", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        //如果不能找到Editor接口。尝试使用 SharedPreferences.Editor
+                        editor.putString("user_id", username);
+                        editor.putString("pwd", password);
+                        //我将用户信息保存到其中，你也可以保存登录状态
+                        editor.commit();
+
                         app.showMessage("登录成功");
                     } else {
                         app.showMessage("登录失败");
@@ -411,7 +451,7 @@ public class MainActivity extends Activity {
                 //如果删除的就是当前显示的账号，那么将主界面当前显示的头像设置回初始头像
                 if (position == currentSelectedPosition) {
                     currentUserImage.setImageResource(R.drawable.qqmain);
-                    qqEdit.setText("");
+                    //qqEdit.setText("");
                     currentSelectedPosition = -1;
                 } else if (position < currentSelectedPosition) {
                     currentSelectedPosition--;    //这里小于当前选择的position时需要进行减1操作

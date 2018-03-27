@@ -40,6 +40,8 @@ public class ChatApplication extends Application implements EngineEventListener 
     @Override
     public void onTerminate() {
         super.onTerminate();
+        final ChatApplication app = (ChatApplication) this;
+        app.getEngine().close();
     }
 
     @Override
