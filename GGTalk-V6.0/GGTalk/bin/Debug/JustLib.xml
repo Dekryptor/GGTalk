@@ -1,0 +1,565 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JustLib</name>
+    </assembly>
+    <members>
+        <member name="P:JustLib.IUser.Department">
+            <summary>
+            如果为空字符串，则表示位于组织外。
+            </summary>
+        </member>
+        <member name="F:JustLib.GroupChangedType.MemberInfoChanged">
+            <summary>
+            成员的资料发生变化
+            </summary>
+        </member>
+        <member name="F:JustLib.GroupChangedType.GroupInfoChanged">
+            <summary>
+            组的资料（如组名称、公告等）发生变化
+            </summary>
+        </member>
+        <member name="T:JustLib.NetworkDisk.NetworkDiskState">
+            <summary>
+            用户使用的网络硬盘的状态。
+            </summary>
+        </member>
+        <member name="P:JustLib.NetworkDisk.NetworkDiskState.TotalSize">
+            <summary>
+            TotalSize 网络硬盘总大小。
+            </summary>
+        </member>
+        <member name="P:JustLib.NetworkDisk.NetworkDiskState.SizeUsed">
+            <summary>
+            SizeUsed 已经使用的网络硬盘大小。
+            </summary>
+        </member>
+        <member name="T:JustLib.NetworkDisk.OperationResult">
+            <summary>
+            针对Delete/Move/Copy操作的回复。
+            </summary>
+        </member>
+        <member name="P:JustLib.NetworkDisk.OperationResult.ErrorMessage">
+            <summary>
+            如果Succeed为false，则该属性说明失败的原因。
+            </summary>
+        </member>
+        <member name="T:JustLib.NetworkDisk.SharedDirectory">
+            <summary>
+            共享的目录内容。
+            </summary>
+        </member>
+        <member name="M:JustLib.NetworkDisk.SharedDirectory.GetSharedDirectory(System.String)">
+            <summary>
+            获取某个目录下的所有文件以及所有子目录。
+            </summary>
+            <param name="dirPath">父目录路径，如果为null，表示获取根目录（如“我的电脑”）下的磁盘或目录</param>              
+        </member>
+        <member name="P:JustLib.NetworkDisk.SharedDirectory.Valid">
+            <summary>
+            Valid 表示获取目录信息是否成功。如果不成功，则Exception属性指出了失败的原因。
+            </summary>
+        </member>
+        <member name="P:JustLib.NetworkDisk.SharedDirectory.Exception">
+            <summary>
+            Exception 当获取目录信息失败时，该属性指出了失败的原因。
+            </summary>
+        </member>
+        <member name="M:JustLib.NetworkDisk.SharedDirectory.GetChildPath(System.String)">
+            <summary>
+            GetChildPath 获取当前目录下的某目录或文件的路径。
+            </summary>       
+        </member>
+        <member name="T:JustLib.NetworkDisk.FileDetail">
+            <summary>
+            文件的详细信息。
+            </summary>
+        </member>
+        <member name="P:JustLib.NetworkDisk.FileDetail.CreateTime">
+            <summary>
+            文件的创建时间
+            </summary>
+        </member>
+        <member name="T:JustLib.NetworkDisk.DirectoryDetail">
+            <summary>
+            目录的详细信息。
+            </summary>
+        </member>
+        <member name="P:JustLib.NetworkDisk.DirectoryDetail.CreateTime">
+            <summary>
+            目录的创建时间
+            </summary>
+        </member>
+        <member name="T:JustLib.NetworkDisk.DiskDrive">
+            <summary>
+            磁盘/光驱等设备的详细信息。
+            </summary>
+        </member>
+        <member name="T:JustLib.NetworkDisk.Comment4NDisk">
+            <summary>
+            在网盘的环境中解析BeginSendFile方法的comment参数。
+            </summary>
+        </member>
+        <member name="P:JustLib.NetworkDisk.CopyContract.NetDiskID">
+            <summary>
+            要访问的网络磁盘的ID。
+            </summary>
+        </member>
+        <member name="P:JustLib.NetworkDisk.CreateDirectoryContract.NetDiskID">
+            <summary>
+            要访问的网络磁盘的ID。
+            </summary>
+        </member>
+        <member name="P:JustLib.NetworkDisk.DeleteContract.NetDiskID">
+            <summary>
+            要访问的网络磁盘的ID。
+            </summary>
+        </member>
+        <member name="P:JustLib.NetworkDisk.DownloadContract.NetDiskID">
+            <summary>
+            要访问的网络磁盘的ID。
+            </summary>
+        </member>
+        <member name="P:JustLib.NetworkDisk.MoveContract.NetDiskID">
+            <summary>
+            要访问的网络磁盘的ID。
+            </summary>
+        </member>
+        <member name="T:JustLib.NetworkDisk.OperationResultConatract">
+            <summary>
+            针对Delete/Move/Copy的操作回复。
+            </summary>
+        </member>
+        <member name="P:JustLib.NetworkDisk.RenameContract.NetDiskID">
+            <summary>
+            要访问的网络磁盘的ID。
+            </summary>
+        </member>
+        <member name="P:JustLib.NetworkDisk.RenameContract.ParentDirectoryPath">
+            <summary>
+            ParentDirectoryPath 要重命名的文件或文件夹在哪个目录下。
+            </summary>
+        </member>
+        <member name="T:JustLib.NetworkDisk.ReqDirectoryContract">
+            <summary>
+            获取某个目录的信息。
+            </summary>	
+        </member>
+        <member name="P:JustLib.NetworkDisk.ReqDirectoryContract.NetDiskID">
+            <summary>
+            要访问的网络磁盘的ID。
+            </summary>
+        </member>
+        <member name="P:JustLib.NetworkDisk.ReqDirectoryContract.DirectoryPath">
+            <summary>
+            DirectoryPath 如果值为null，表示获取所有的磁盘驱动器列表。
+            </summary>
+        </member>
+        <member name="T:JustLib.NetworkDisk.ResDirectoryContract">
+            <summary>
+            回复某个目录信息。
+            </summary>	
+        </member>
+        <member name="T:JustLib.NetworkDisk.NDiskInfoTypes">
+            <summary>
+            所有与网盘相关的消息类型的空间。默认取值 -100 ~ 0
+            </summary>	
+        </member>
+        <member name="P:JustLib.NetworkDisk.NDiskInfoTypes.ReqDirectory">
+            <summary>
+            请求目录信息。请求协议为ReqDirectoryContract，回复为ResDirectoryContract
+            </summary>
+        </member>
+        <member name="P:JustLib.NetworkDisk.NDiskInfoTypes.CreateDirectory">
+            <summary>
+            创建目录。
+            </summary>
+        </member>
+        <member name="P:JustLib.NetworkDisk.NDiskInfoTypes.Delete">
+            <summary>
+            删除文件或文件夹。请求协议DeleteContract，回复协议OperationResultConatract。
+            </summary>
+        </member>
+        <member name="P:JustLib.NetworkDisk.NDiskInfoTypes.Rename">
+            <summary>
+            为文件或文件夹重命名。请求协议RenameContract，回复协议OperationResultConatract。
+            </summary>
+        </member>
+        <member name="P:JustLib.NetworkDisk.NDiskInfoTypes.ReqNetworkDiskState">
+            <summary>
+            获取网络硬盘的状态，请求协议为null，回复协议为ResNetworkDiskStateContract。
+            </summary>
+        </member>
+        <member name="P:JustLib.NetworkDisk.NDiskInfoTypes.Move">
+            <summary>
+            移动多个文件或文件夹。请求协议为MoveContract，回复协议OperationResultConatract。
+            </summary>
+        </member>
+        <member name="P:JustLib.NetworkDisk.NDiskInfoTypes.Copy">
+            <summary>
+            复制多个文件或文件夹。请求协议为CopyContract，回复协议OperationResultConatract。
+            </summary>
+        </member>
+        <member name="P:JustLib.NetworkDisk.NDiskInfoTypes.Download">
+            <summary>
+            请求下载文件（夹）。请求协议为DownloadContract，回复协议OperationResultConatract。
+            </summary>
+        </member>
+        <member name="P:JustLib.NetworkDisk.Passive.INDiskBrowser.AllowUploadFolder">
+            <summary>
+            是否允许上传文件夹
+            </summary>
+        </member>
+        <member name="P:JustLib.NetworkDisk.Passive.INDiskBrowser.CurrentDirectoryPath">
+            <summary>
+            当前所在目录的路径。
+            </summary>
+        </member>
+        <member name="P:JustLib.NetworkDisk.Passive.INDiskBrowser.Connected">
+            <summary>
+            OwnerIsOnline 远程机器是否在线。
+            </summary>
+        </member>
+        <member name="P:JustLib.NetworkDisk.Passive.INDiskBrowser.IsFileTransfering">
+            <summary>
+            是否有文件正在传送中。
+            </summary>
+        </member>
+        <member name="M:JustLib.NetworkDisk.Passive.INDiskBrowser.CancelAllTransfering">
+            <summary>
+            取消所有正在传送的项目。通常是在窗口被关闭时调用。
+            </summary>
+        </member>
+        <member name="T:JustLib.NetworkDisk.Passive.INDiskOutter">
+            <summary>
+            统合了好友远程磁盘以及虚拟网络硬盘的访问。当ownerID为null，表示访问自己在服务器上的网盘。
+            </summary>
+        </member>
+        <member name="M:JustLib.NetworkDisk.Passive.INDiskOutter.GetSharedDirectory(System.String,System.String,System.String)">
+            <summary>
+            GetSharedDirectory 获取ownerID机器上的路径为dirPath的目录信息。
+            </summary>
+            <param name="ownerID">目标机器的主人ID。当ownerID为NetServer.SystemUserID，表示访问自己的网络硬盘。</param>
+            <param name="ownerID">网络磁盘的唯一标志。</param>
+            <param name="dirPath">父目录路径，如果为null，表示获取根目录（如“我的电脑”）下的磁盘或目录</param>       
+        </member>
+        <member name="M:JustLib.NetworkDisk.Passive.INDiskOutter.GetNetworkDiskState(System.String)">
+            <summary>
+            获取自己的网络硬盘的状态。
+            </summary>        
+        </member>
+        <member name="M:JustLib.NetworkDisk.Passive.INDiskOutter.Move(System.String,System.String,System.String,System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.String)">
+            <summary>
+            移动多个文件或文件夹。当远程目录完成操作时，该方法才返回。
+            </summary>        
+            <param name="ownerID">网络磁盘的唯一标志。</param>
+            <param name="oldParentDirectoryPath">被移动的物件所在目录的路径,以"\"结尾</param>     
+            <param name="filesBeMoved">被移动的文件名称的集合</param>
+            <param name="directoriesBeMoved">被移动的文件夹名称的集合</param>
+            <param name="newParentDirectoryPath">目标文件夹的路径,以"\"结尾</param>
+        </member>
+        <member name="M:JustLib.NetworkDisk.Passive.INDiskOutter.Copy(System.String,System.String,System.String,System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.String)">
+            <summary>
+            复制多个文件（夹）。当远程目录完成操作时，该方法才返回。
+            </summary>        
+            <param name="ownerID">网络磁盘的唯一标志。</param>
+            <param name="sourceParentDirectoryPath">被复制的父目录路径,以"\"结尾</param>        
+            <param name="filesBeCopyed">被复制的文件名称的集合</param>
+            <param name="directoriesCopyed">被复制的文件夹名称的集合</param>
+            <param name="destParentDirectoryPath">复制品放到哪个目录下,以"\"结尾</param>       
+        </member>
+        <member name="M:JustLib.NetworkDisk.Passive.INDiskOutter.Upload(System.String,System.String,System.String,System.String)">
+            <summary>
+            UploadFile 上传文件（夹），借助于IFileOutter发送文件（夹）。如果要上传的文件（夹）不存在或被占用，则将抛出对应的异常。
+            </summary>       
+        </member>
+        <member name="M:JustLib.NetworkDisk.Passive.INDiskOutter.Download(System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            请求下载文件（夹）。
+            </summary>
+            <param name="ownerID">目标机器的主人ID。当ownerID为null，表示访问自己的网络硬盘。</param>
+            <param name="ownerID">网络磁盘的唯一标志。</param>
+            <param name="sourceRemotePath">被下载文件（夹）的路径</param>
+            <param name="saveLocalPath">保存本地文件（夹）的路径</param>
+            <param name="isFile">下载的是文件还是文件夹</param>
+            <returns>如果因目标文件（夹）不存在或者被占用而不能下载，会由返回的对象的ErrorMessage表明</returns>
+        </member>
+        <member name="T:JustLib.NetworkDisk.Passive.NDiskOutter">
+            <summary>
+            INDiskOutter接口的实现。
+            </summary>
+        </member>
+        <member name="T:JustLib.NetworkDisk.Passive.NDiskPassiveHandler">
+            <summary>
+            客户端网盘处理器
+            </summary>
+        </member>
+        <member name="T:JustLib.NetworkDisk.Server.INDiskPathManager">
+            <summary>
+            网络硬盘的目录路径管理。可以按照计划的策略将不同用户的虚拟硬盘分散到不同的文件服务器上；也可以采用分布式文件存储系统，如FastDFS。
+            各方法的 netDiskID 参数 ： 如果为null或“”，则表示访问的是个人网盘；否则，表示访问的是一个群组的共享网盘，此时netDiskID即是groupID。
+            </summary>
+        </member>
+        <member name="M:JustLib.NetworkDisk.Server.INDiskPathManager.GetNetworkDiskRootPath(System.String,System.String)">
+            <summary>
+            获取某网盘对应的文件夹所在父目录的路径。返回null表示没有网络硬盘服务。  
+            </summary>       
+        </member>
+        <member name="M:JustLib.NetworkDisk.Server.INDiskPathManager.GetNetworkDiskIniDirName(System.String,System.String)">
+            <summary>
+            获取某网盘的根目录的名称。
+            </summary>        
+        </member>
+        <member name="M:JustLib.NetworkDisk.Server.INDiskPathManager.GetNetworkDiskTotalSize(System.String,System.String)">
+            <summary>
+            获取指定网络硬盘的总大小。
+            </summary>        
+        </member>
+        <member name="M:JustLib.NetworkDisk.Server.INDiskPathManager.GetNetworkDiskSizeUsed(System.String,System.String)">
+            <summary>
+            获取指定网络硬盘已经使用的大小。
+            </summary>        
+        </member>
+        <member name="T:JustLib.NetworkDisk.Server.NetworkDiskPathManager">
+            <summary>
+            提供INDiskPathManager接口的基础实现（简化版）。以某个文件目录作为整个网络硬盘的总目录。
+            </summary>
+        </member>
+        <member name="P:JustLib.NetworkDisk.Server.NetworkDiskPathManager.RootPath4PersonalDisk">
+            <summary>
+            提供个人网络硬盘的根目录，可以为网络路径，如 \\192.168.0.11\FTP\
+            </summary>
+        </member>
+        <member name="P:JustLib.NetworkDisk.Server.NetworkDiskPathManager.RootPath4GroupDisk">
+            <summary>
+            提供群组共享的网络硬盘的根目录，可以为网络路径，如 \\192.168.0.11\FTP\
+            </summary>
+        </member>
+        <member name="P:JustLib.NetworkDisk.Server.NetworkDiskPathManager.TotalSizeOfOneUser">
+            <summary>
+            每个用户的空间大小
+            </summary>
+        </member>
+        <member name="T:JustLib.NetworkDisk.Server.NetworkDisk">
+            <summary>
+            网络硬盘，为用户提供在线的网络硬盘服务。可通过INetworkDiskPathManager来将不同用户的目录分散到不同的文件服务器上。
+            </summary>
+        </member>
+        <member name="P:JustLib.Records.ChatMessageRecord.AutoID">
+            <summary>
+            自增ID，编号。
+            </summary>
+        </member>
+        <member name="P:JustLib.Records.ChatMessageRecord.SpeakerID">
+            <summary>
+            发言人的ID。
+            </summary>
+        </member>
+        <member name="P:JustLib.Records.ChatMessageRecord.AudienceID">
+            <summary>
+            听众ID，可以为GroupID。
+            </summary>
+        </member>
+        <member name="P:JustLib.Records.ChatMessageRecord.OccureTime">
+            <summary>
+            聊天记录发生的时间。
+            </summary>
+        </member>
+        <member name="P:JustLib.Records.ChatMessageRecord.Content">
+            <summary>
+            聊天的内容。
+            </summary>
+        </member>
+        <member name="P:JustLib.Records.ChatMessageRecord.IsGroupChat">
+            <summary>
+            是否为群聊记录。
+            </summary>
+        </member>
+        <member name="M:JustLib.Records.IChatRecordPersister.InsertChatMessageRecord(JustLib.Records.ChatMessageRecord)">
+            <summary>
+            插入一条聊天记录（包括群聊天记录）。
+            </summary>  
+        </member>
+        <member name="M:JustLib.Records.IChatRecordPersister.GetChatRecordPage(JustLib.Records.ChatRecordTimeScope,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            获取一页与好友的聊天记录。
+            </summary>
+            <param name="timeScope">日期范围</param>
+            <param name="myID">自己的UserID</param>
+            <param name="friendID">好友的ID</param>
+            <param name="pageSize">页大小</param>
+            <param name="pageIndex">页索引</param>      
+            <returns>聊天记录页</returns>
+        </member>
+        <member name="M:JustLib.Records.IChatRecordPersister.GetGroupChatRecordPage(JustLib.Records.ChatRecordTimeScope,System.String,System.Int32,System.Int32)">
+            <summary>
+            获取一页群聊天记录。
+            </summary>
+            <param name="timeScope">日期范围</param>
+            <param name="groupID">群ID</param>
+            <param name="pageSize">页大小</param>
+            <param name="pageIndex">页索引</param>     
+            <returns>聊天记录页</returns>
+        </member>
+        <member name="T:JustLib.Records.DefaultChatRecordPersister">
+            <summary>
+            聊天记录本地持久化器。
+            </summary>
+        </member>
+        <member name="M:JustLib.Records.DefaultChatRecordPersister.InsertChatMessageRecord(JustLib.Records.ChatMessageRecord)">
+            <summary>
+            插入一条聊天记录。
+            </summary>      
+        </member>
+        <member name="M:JustLib.Records.DefaultChatRecordPersister.GetGroupChatRecordPage(JustLib.Records.ChatRecordTimeScope,System.String,System.Int32,System.Int32)">
+            <summary>
+            获取一页群聊天记录。
+            </summary>
+            <param name="groupID">群ID</param>
+            <param name="pageSize">页大小</param>
+            <param name="pageIndex">页索引</param>     
+            <returns>聊天记录页</returns>
+        </member>
+        <member name="M:JustLib.Records.DefaultChatRecordPersister.GetChatRecordPage(JustLib.Records.ChatRecordTimeScope,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            获取一页与好友的聊天记录。
+            </summary>
+            <param name="myID">自己的UserID</param>
+            <param name="friendID">好友的ID</param>
+            <param name="pageSize">页大小</param>
+            <param name="pageIndex">页索引</param>      
+            <returns>聊天记录页</returns>
+        </member>
+        <member name="T:JustLib.Records.SqliteChatRecordPersister">
+            <summary>
+            聊天记录本地持久化器（Sqlite数据库）。
+            </summary>
+        </member>
+        <member name="T:JustLib.Properties.Resources">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:JustLib.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:JustLib.Properties.Resources.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="P:JustLib.Properties.Resources.Accept">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:JustLib.Properties.Resources.app_icon_40">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:JustLib.Properties.Resources.Arrow">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:JustLib.Properties.Resources.AV_Accept">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:JustLib.Properties.Resources.copy">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:JustLib.Properties.Resources.cut">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:JustLib.Properties.Resources.delete">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:JustLib.Properties.Resources.down">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:JustLib.Properties.Resources.editRedo">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:JustLib.Properties.Resources.editUndo">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:JustLib.Properties.Resources.Ellipse">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:JustLib.Properties.Resources.Exit">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:JustLib.Properties.Resources.folder_new">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:JustLib.Properties.Resources.Go">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:JustLib.Properties.Resources.Line">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:JustLib.Properties.Resources.paste">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:JustLib.Properties.Resources.Rectangular">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:JustLib.Properties.Resources.Redo">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:JustLib.Properties.Resources.refresh">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:JustLib.Properties.Resources.Save">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:JustLib.Properties.Resources.Text">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:JustLib.Properties.Resources.up">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+    </members>
+</doc>
