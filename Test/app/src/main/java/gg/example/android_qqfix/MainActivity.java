@@ -22,7 +22,6 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.igg.myapplication.ChatApplication;
 import com.oraycn.es.communicate.core.Configuration;
 import com.oraycn.es.communicate.framework.Basic.RapidEngineFactory;
 import com.oraycn.es.communicate.framework.BasicEventListener;
