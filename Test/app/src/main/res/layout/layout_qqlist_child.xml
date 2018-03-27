@@ -39,7 +39,7 @@
         android:textSize="5pt"
         android:textColor="#666666"/>
     <!-- 注意不是layout_padding -->
-    <gg.example.android_qqfix.BezierView
+    <gg.example.qq.BezierView
         android:id="@+id/unReadMessage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -3,7 +3,7 @@ package gg.dragon.persondata;
 import java.util.HashMap;
 import java.util.Map;
 
-import gg.example.android_qqfix.R;
+import gg.example.qq.R;
 import gg.model.GGUser;
 import gg.model.UserStatus;
 

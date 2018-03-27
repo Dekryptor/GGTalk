@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import gg.example.android_qqfix.ChatApplication;
+import gg.example.qq.ChatApplication;
 import gg.model.ChatContentContract;
 import gg.model.ContractType;
 import gg.model.UserStatusChangedContract;

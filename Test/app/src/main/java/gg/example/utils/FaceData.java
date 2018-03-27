@@ -2,7 +2,7 @@ package gg.example.utils;
 
 import java.util.HashMap;
 
-import gg.example.android_qqfix.R;
+import gg.example.qq.R;
 
 public class FaceData {
 	public static HashMap<String, Integer> gifFaceInfo;
