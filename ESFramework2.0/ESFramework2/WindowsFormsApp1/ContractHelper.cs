@@ -7,7 +7,7 @@ using ESFramework.Core;
 
 namespace WindowsFormsApp1
 {
-    class Class1 : IContractHelper
+    class ContractHelper : IContractHelper
     {
         IMessageHeader mMessageHeader = new MessageHeader();
 
@@ -43,21 +43,24 @@ namespace WindowsFormsApp1
 
         public IMessageHeader ParseMessageHeader(byte[] data, int offset)
         {
+            return mMessageHeader;
             throw new NotImplementedException();
         }
 
         public bool ValidateMessageToken(IMessageHeader header)
         {
-            throw new NotImplementedException();
+            return true;
         }
 
         public bool VerifyFirstMessage(NetMessage msg)
         {
+            return true;
             throw new NotImplementedException();
         }
 
         public bool VerifyOtherMessage(NetMessage msg)
         {
+            return true;
             throw new NotImplementedException();
         }
     }

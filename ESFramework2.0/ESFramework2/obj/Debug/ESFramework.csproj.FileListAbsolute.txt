@@ -4,3 +4,9 @@ F:\Git\ESFramework2.0源码和Demo\ESFramework2\obj\Debug\ESFramework.csprojReso
 F:\Git\ESFramework2.0源码和Demo\ESFramework2\obj\Debug\ESFramework.csproj.CoreCompileInputs.cache
 F:\Git\ESFramework2.0源码和Demo\ESFramework2\obj\Debug\ESFramework.dll
 F:\Git\ESFramework2.0源码和Demo\ESFramework2\obj\Debug\ESFramework.pdb
+F:\Git\GGTalk\ESFramework2.0\ESFramework2\bin\Debug\ESFramework.dll
+F:\Git\GGTalk\ESFramework2.0\ESFramework2\bin\Debug\ESFramework.pdb
+F:\Git\GGTalk\ESFramework2.0\ESFramework2\obj\Debug\ESFramework.csprojResolveAssemblyReference.cache
+F:\Git\GGTalk\ESFramework2.0\ESFramework2\obj\Debug\ESFramework.csproj.CoreCompileInputs.cache
+F:\Git\GGTalk\ESFramework2.0\ESFramework2\obj\Debug\ESFramework.dll
+F:\Git\GGTalk\ESFramework2.0\ESFramework2\obj\Debug\ESFramework.pdb

@@ -5,6 +5,8 @@ using System.Net.Sockets;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ESFramework;
+using ESFramework.Core;
+using ESFramework.Passive;
 using ESFramework.Server.Tcp;
 
 namespace WindowsFormsApp1
@@ -19,7 +21,37 @@ namespace WindowsFormsApp1
         {
 
             AsynTcp tcp = new AsynTcp();
-            tcp.ContractHelper = new Class1();
+            ContractHelper contract = new ContractHelper();
+            tcp.ContractHelper = contract;
+
+            TcpStreamDispatcher dispatcher = new TcpStreamDispatcher();
+            dispatcher.ContractHelper = contract;
+
+            MessageDispatcher messageDispatcher = new MessageDispatcher();
+
+            NakeDispatcher nake = new NakeDispatcher();
+            nake.ContractHelper = contract;
+
+            SimplePassiveProcesser simplePassiveProcesser = new SimplePassiveProcesser();
+
+            ProcesserFactory processerFactory = new ProcesserFactory();
+            processerFactory.ContractHelper = contract;
+            processerFactory.ForeignProcesser = new SelectiveProcesser();
+
+            simplePassiveProcesser.ProcesserFactory = processerFactory;
+            simplePassiveProcesser.AllDataDealer = new SelectiveProcesser();
+            ResponseManager responseManager = new ResponseManager();
+            responseManager.Initialize();
+            simplePassiveProcesser.ResponseManager = responseManager;
+
+            nake.ProcesserFactory = new SingleProcesserFactory(simplePassiveProcesser);
+            //nake.ProcesserFactory = new SingleProcesserFactory(new SelectiveProcesser());
+
+            messageDispatcher.NakeDispatcher = nake;
+
+            dispatcher.MessageDispatcher = messageDispatcher;
+
+            tcp.Dispatcher = dispatcher;
             tcp.Initialize();
             tcp.Start();
 

@@ -11,3 +11,16 @@ F:\Git\ESFramework2.0源码和Demo\ESFramework2\WindowsFormsApp1\obj\Debug\Windo
 F:\Git\ESFramework2.0源码和Demo\ESFramework2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 F:\Git\ESFramework2.0源码和Demo\ESFramework2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 F:\Git\ESFramework2.0源码和Demo\ESFramework2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+F:\Git\GGTalk\ESFramework2.0\ESFramework2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojResolveAssemblyReference.cache
+F:\Git\GGTalk\ESFramework2.0\ESFramework2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+F:\Git\GGTalk\ESFramework2.0\ESFramework2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+F:\Git\GGTalk\ESFramework2.0\ESFramework2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.Cache
+F:\Git\GGTalk\ESFramework2.0\ESFramework2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+F:\Git\GGTalk\ESFramework2.0\ESFramework2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+F:\Git\GGTalk\ESFramework2.0\ESFramework2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+F:\Git\GGTalk\ESFramework2.0\ESFramework2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+F:\Git\GGTalk\ESFramework2.0\ESFramework2\WindowsFormsApp1\bin\Debug\ESFramework.dll
+F:\Git\GGTalk\ESFramework2.0\ESFramework2\WindowsFormsApp1\bin\Debug\ESBasic.dll
+F:\Git\GGTalk\ESFramework2.0\ESFramework2\WindowsFormsApp1\bin\Debug\ESFramework.pdb
+F:\Git\GGTalk\ESFramework2.0\ESFramework2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+F:\Git\GGTalk\ESFramework2.0\ESFramework2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
