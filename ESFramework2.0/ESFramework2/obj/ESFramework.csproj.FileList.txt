@@ -1,0 +1,6 @@
+bin\Debug\ESFramework.dll
+bin\Debug\ESFramework.pdb
+bin\Debug\ESBasic.dll
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\ESFramework.dll
+obj\Debug\ESFramework.pdb

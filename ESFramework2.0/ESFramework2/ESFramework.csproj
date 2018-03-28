@@ -1,0 +1,331 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5D5ED686-EBDF-48D1-BA6B-9D36CEE29A7E}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>ESFramework</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ESFramework</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ESBasic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Addins\AddinBridge.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Addins\Extend\IInnerProcesser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Addins\Extend\InnerDispatcher.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Addins\IFunAddin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Addins\IPassiveAddin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Addins\Upgrade\IAddinUpgrador.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Base\IEsbLogger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Contract\IContract.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Contract\IContractHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Contract\IMessageHeader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Contract\Message.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Contract\NetMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\ProcesserFactory\AddinProcesserFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\ProcesserFactory\ProcesserBag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\ProcesserFactory\ProcesserFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\ProcesserFactory\IProcesserFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\ProcesserFactory\SingleProcesserFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Processer\IBasicProcesser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Processer\IMessageProcesser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Processer\SelectiveProcesser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Dispatcher\MessageDispatcher.cs" />
+    <Compile Include="Core\Dispatcher\NakeDispatcher.cs" />
+    <Compile Include="Core\HookSender\IHookSender.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Dispatcher\IMessageDispatcher.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Dispatcher\INakeDispatcher.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\HookSender\ITcpHookSender.cs" />
+    <Compile Include="Core\HookSender\IUdpHookSender.cs" />
+    <Compile Include="Core\Hook\BaseHook.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Hook\ContainerStyleHook.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Hook\INetMessageHook.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Spy\ContainerStyleSpy.cs" />
+    <Compile Include="Core\Spy\INetMessageSpy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\ToClientSender\ContainerStyleToClientSender.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\ToClientSender\IToClientSender.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Server\Udp\EsbUdp.cs" />
+    <Compile Include="Server\UserManager\IUserManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Server\UserManager\IUserOnLineChecker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Base\EsfIPEndPoint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Server\INetDisplayer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Base\IServiceKeyNameMatcher.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Base\NetHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Passive\Core\IPassiveHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Passive\Core\ServerAgent\IP2PChannelManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Passive\Core\ServerAgent\IMessageTransceiver.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Passive\Core\ServerAgent\IResponseManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Passive\Core\ServerAgent\IServerAgent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Passive\Core\ServerAgent\IServerAgentHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Passive\Core\SimplePassiveDataDealer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Base\EsfTcpClient.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Passive\Tcp\ITcpAutoSender.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Passive\Tcp\ITcpPassive.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Passive\Tcp\ServerAgent\ITcpServerAgent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Passive\Tcp\ServerAgent\TcpServerAgent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Passive\Tcp\TcpPassive.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Passive\Udp\ServerAgent\IUdpServerAgent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Passive\Udp\ServerAgent\UdpServerAgent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Server\Tcp\BaseElement\ContextKey.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Server\Tcp\BaseElement\IBufferPool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Server\Tcp\BaseElement\IContextKeyManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Server\Tcp\BaseElement\IEsfTcpListener.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Server\Tcp\BaseElement\ISafeNetworkStream.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Server\Tcp\Core\AgileTcp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Server\Tcp\Core\AsynTcp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Server\Tcp\Core\ITcp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Server\Tcp\Core\ITcpStreamDispatcher.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Server\Tcp\Core\TcpHookSender.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Server\Tcp\TcpUserManagment\ITcpUserDisplayer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Server\Tcp\TcpUserManagment\ITcpUserManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Server\Tcp\TcpUserManagment\IUserTaskReporter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Server\Tcp\TcpUserManagment\TcpUserManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Server\Tcp\TcpUserManagment\TcpUserManagerBridge.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Server\Tcp\TcpUserManagment\ToLocalClientSender.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Server\Udp\IEsbUdp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Server\Udp\UdpUserManagment\IUdpUserManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Server\Udp\UdpUserManagment\ToLocalClientSender.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Server\Udp\UdpUserManagment\UdpUserManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Server\Udp\UdpUserManagment\UdpUserManagerBridge.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="Addins\说明.txt" />
+    <Content Include="NetConfigExample.xml" />
+    <Content Include="Server\Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Model\Core\Peocesser.cd">
+      <SubType>
+      </SubType>
+    </None>
+    <None Include="Model\Core\Dispatcher.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

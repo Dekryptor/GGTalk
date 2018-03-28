@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="宋体" Size="9" />
+  <Interface Name="ESFramework.Core.IMessageDispatcher">
+    <Position X="4.75" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Core\Dispatcher\IMessageDispatcher.cs</FileName>
+      <HashCode>AAAAAAQAQAAAACIAAAACAIAIAAAAAAAAAAIAAAAAAgA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="NetMessageHook" />
+      <Property Name="GatewayMessageSpy" />
+      <Property Name="InnerMessageSpy" />
+      <Property Name="NakeDispatcher" />
+    </ShowAsAssociation>
+    <AssociationLine Name="NakeDispatcher" Type="ESFramework.Core.INakeDispatcher">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.15" Y="0.31" />
+      </MemberNameLabel>
+    </AssociationLine>
+  </Interface>
+  <Interface Name="ESFramework.Core.IInnerMessageSpy" Collapsed="true">
+    <Position X="8" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Core\Spy\INetMessageSpy.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ESFramework.Core.INetMessageSpy">
+    <Position X="10.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Core\Spy\INetMessageSpy.cs</FileName>
+      <HashCode>AABAAAAAAAAAAIAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ESFramework.Core.IGatewayMessageSpy" Collapsed="true">
+    <Position X="8" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Core\Spy\INetMessageSpy.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ESFramework.Core.INetMessageHook">
+    <Position X="8" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <FileName>Core\Hook\INetMessageHook.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAoAAAAIgAAAAQAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ESFramework.Core.INakeDispatcher">
+    <Position X="4.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Core\Dispatcher\INakeDispatcher.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAg=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DataDealerFactory" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="ESFramework.Core.IHookSender">
+    <Position X="1.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Core\HookSender\IHookSender.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MessageDispatcher" />
+    </ShowAsAssociation>
+    <AssociationLine Name="MessageDispatcher" Type="ESFramework.Core.IMessageDispatcher">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.12" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+  </Interface>
+  <Interface Name="ESFramework.Core.ITcpHookSender" Collapsed="true">
+    <Position X="1" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Core\HookSender\ITcpHookSender.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ESFramework.Core.IUdpHookSender" Collapsed="true">
+    <Position X="2.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Core\HookSender\IUdpHookSender.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ESFramework.Core.IProcesserFactory">
+    <Position X="8" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Core\ProcesserFactory\IProcesserFactory.cs</FileName>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ESFramework.Core.IToClientSender">
+    <Position X="1.75" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <FileName>Core\ToClientSender\IToClientSender.cs</FileName>
+      <HashCode>AAAAAAAIAAAAAAAAAABBAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HookSender" />
+    </ShowAsAssociation>
+    <AssociationLine Name="HookSender" Type="ESFramework.Core.IHookSender">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.1" Y="0.133" />
+      </MemberNameLabel>
+    </AssociationLine>
+  </Interface>
+</ClassDiagram>

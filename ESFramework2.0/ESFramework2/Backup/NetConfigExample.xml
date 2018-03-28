@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<spring>
+  <context> 
+    <resource uri="config://spring/objects"/>
+  </context>
+
+  <objects xmlns="http://www.springframework.net" >    
+    <object name="addinManagement" type="ESFramework.Addins.AddinManagement ,ESFramework">
+      <property name="CopyToMemory" value="false"/>
+    </object>
+ 
+    <object name="contractHelper" type="DataCenterBase.ContractHelper ,DataCenterBase">
+      <property name="ServerType" value="27"/>
+    </object>
+
+    <!-- ******************************  Core  ***************************************************************** -->
+    <object name="agileTcp" type="ESFramework.Network.Tcp.AsynTcp ,ESFramework" init-method="Initialize">
+      <property name="AutoOnPublicIPAddress" value="true" />
+      <property name="Port" value="6006" />
+      <property name="MaxMessageSize" value="2000000"/>
+      <property name="Dispatcher" ref="tcpStreamDispatcher"/>
+      <property name="ContractHelper" ref="contractHelper"/>
+      <property name="BufferPool">
+        <object type="ESFramework.Network.Tcp.SimpleBufferPool ,ESFramework"/>
+      </property>
+    </object>
+
+    <object name="tcpStreamDispatcher" type="ESFramework.Network.Tcp.TcpStreamDispatcher ,ESFramework">
+      <property name="ContractHelper" ref="contractHelper"/>
+      <property name="MessageDispatcher" ref="messageDispatcher"/>
+    </object>
+
+    <object name="messageDispatcher" type="ESFramework.Network.MessageDispatcher ,ESFramework">
+      <property name="NakeDispatcher" ref="nakeDispatcher"/>
+      <property name="ContractHelper" ref="contractHelper"/>
+    </object>
+
+    <object name="nakeDispatcher" type="ESFramework.Network.NakeDispatcher ,ESFramework">
+      <property name="DataDealerFactory" ref="addinDealerFactory"/>
+      <property name="ContractHelper" ref="contractHelper"/>
+    </object>
+
+    <object name="addinDealerFactory" type="ESFramework.Network.AddinDealerFactory ,ESFramework">
+      <property name="AddinManagement" ref="addinManagement"/>
+    </object>
+
+    <object name="esbLogger" type="ESFramework.FileEsbLogger ,ESFramework">
+      <property name="Enabled" value="true"/>
+      <property name="FilePath" value="log.txt"/>
+      <property name="LogLevel" value="0"/>
+    </object>
+
+  </objects>
+</spring>

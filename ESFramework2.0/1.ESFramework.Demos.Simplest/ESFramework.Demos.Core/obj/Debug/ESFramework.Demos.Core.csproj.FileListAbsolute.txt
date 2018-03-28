@@ -1,0 +1,17 @@
+C:\Users\zhuhao\Desktop\1.ESFramework.Demos.Simplest\ESFramework.Demos.Core\bin\Debug\ESFramework.Demos.Core.dll
+C:\Users\zhuhao\Desktop\1.ESFramework.Demos.Simplest\ESFramework.Demos.Core\bin\Debug\ESFramework.Demos.Core.pdb
+C:\Users\zhuhao\Desktop\1.ESFramework.Demos.Simplest\ESFramework.Demos.Core\bin\Debug\ESBasic.dll
+C:\Users\zhuhao\Desktop\1.ESFramework.Demos.Simplest\ESFramework.Demos.Core\bin\Debug\ESFramework.dll
+C:\Users\zhuhao\Desktop\1.ESFramework.Demos.Simplest\ESFramework.Demos.Core\bin\Debug\ESBasic.xml
+C:\Users\zhuhao\Desktop\1.ESFramework.Demos.Simplest\ESFramework.Demos.Core\bin\Debug\ESFramework.xml
+C:\Users\zhuhao\Desktop\1.ESFramework.Demos.Simplest\ESFramework.Demos.Core\obj\Debug\ESFramework.Demos.Core.dll
+C:\Users\zhuhao\Desktop\1.ESFramework.Demos.Simplest\ESFramework.Demos.Core\obj\Debug\ESFramework.Demos.Core.pdb
+F:\Git\ESFramework2.0源码和Demo\1.ESFramework.Demos.Simplest\ESFramework.Demos.Core\bin\Debug\ESFramework.Demos.Core.dll
+F:\Git\ESFramework2.0源码和Demo\1.ESFramework.Demos.Simplest\ESFramework.Demos.Core\bin\Debug\ESFramework.Demos.Core.pdb
+F:\Git\ESFramework2.0源码和Demo\1.ESFramework.Demos.Simplest\ESFramework.Demos.Core\bin\Debug\ESBasic.dll
+F:\Git\ESFramework2.0源码和Demo\1.ESFramework.Demos.Simplest\ESFramework.Demos.Core\bin\Debug\ESFramework.dll
+F:\Git\ESFramework2.0源码和Demo\1.ESFramework.Demos.Simplest\ESFramework.Demos.Core\bin\Debug\ESBasic.xml
+F:\Git\ESFramework2.0源码和Demo\1.ESFramework.Demos.Simplest\ESFramework.Demos.Core\bin\Debug\ESFramework.xml
+F:\Git\ESFramework2.0源码和Demo\1.ESFramework.Demos.Simplest\ESFramework.Demos.Core\obj\Debug\ESFramework.Demos.Core.csproj.CoreCompileInputs.cache
+F:\Git\ESFramework2.0源码和Demo\1.ESFramework.Demos.Simplest\ESFramework.Demos.Core\obj\Debug\ESFramework.Demos.Core.dll
+F:\Git\ESFramework2.0源码和Demo\1.ESFramework.Demos.Simplest\ESFramework.Demos.Core\obj\Debug\ESFramework.Demos.Core.pdb

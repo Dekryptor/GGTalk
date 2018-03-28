@@ -1,0 +1,10 @@
+F:\Git\ESFramework2.0源码和Demo\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+F:\Git\ESFramework2.0源码和Demo\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+F:\Git\ESFramework2.0源码和Demo\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+F:\Git\ESFramework2.0源码和Demo\ConsoleApp1\bin\Debug\ESFramework.dll
+F:\Git\ESFramework2.0源码和Demo\ConsoleApp1\bin\Debug\ESBasic.dll
+F:\Git\ESFramework2.0源码和Demo\ConsoleApp1\bin\Debug\ESFramework.pdb
+F:\Git\ESFramework2.0源码和Demo\ConsoleApp1\obj\Debug\ConsoleApp1.csprojResolveAssemblyReference.cache
+F:\Git\ESFramework2.0源码和Demo\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+F:\Git\ESFramework2.0源码和Demo\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+F:\Git\ESFramework2.0源码和Demo\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

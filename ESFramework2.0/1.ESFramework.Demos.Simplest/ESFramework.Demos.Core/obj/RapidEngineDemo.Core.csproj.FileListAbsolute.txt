@@ -1,0 +1,9 @@
+D:\01.DomeProject\NewDomes\1.RapidEngineDemo\RapidEngineDemo\RapidEngineDemo.Core\bin\Debug\RapidEngineDemo.Core.dll
+D:\01.DomeProject\NewDomes\1.RapidEngineDemo\RapidEngineDemo\RapidEngineDemo.Core\bin\Debug\RapidEngineDemo.Core.pdb
+D:\01.DomeProject\NewDomes\1.RapidEngineDemo\RapidEngineDemo\RapidEngineDemo.Core\bin\Debug\ESBasic.dll
+D:\01.DomeProject\NewDomes\1.RapidEngineDemo\RapidEngineDemo\RapidEngineDemo.Core\bin\Debug\ESFramework.dll
+D:\01.DomeProject\NewDomes\1.RapidEngineDemo\RapidEngineDemo\RapidEngineDemo.Core\bin\Debug\ESFramework.xml
+D:\01.DomeProject\NewDomes\1.RapidEngineDemo\RapidEngineDemo\RapidEngineDemo.Core\bin\Debug\ESBasic.xml
+D:\01.DomeProject\NewDomes\1.RapidEngineDemo\RapidEngineDemo\RapidEngineDemo.Core\obj\Debug\ResolveAssemblyReference.cache
+D:\01.DomeProject\NewDomes\1.RapidEngineDemo\RapidEngineDemo\RapidEngineDemo.Core\obj\Debug\RapidEngineDemo.Core.dll
+D:\01.DomeProject\NewDomes\1.RapidEngineDemo\RapidEngineDemo\RapidEngineDemo.Core\obj\Debug\RapidEngineDemo.Core.pdb

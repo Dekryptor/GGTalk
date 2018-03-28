@@ -1,0 +1,16 @@
+C:\Users\david\Desktop\NewDemos\1.ESFramework.Demos.Simplest\1.ESFramework.Demos.Simplest\RapidEngineDemo.Core\bin\Debug\ESFramework.Demos.Simplest.Core.dll
+C:\Users\david\Desktop\NewDemos\1.ESFramework.Demos.Simplest\1.ESFramework.Demos.Simplest\RapidEngineDemo.Core\bin\Debug\ESFramework.Demos.Simplest.Core.pdb
+C:\Users\david\Desktop\NewDemos\1.ESFramework.Demos.Simplest\1.ESFramework.Demos.Simplest\RapidEngineDemo.Core\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\david\Desktop\NewDemos\1.ESFramework.Demos.Simplest\1.ESFramework.Demos.Simplest\RapidEngineDemo.Core\obj\Debug\ESFramework.Demos.Simplest.Core.dll
+C:\Users\david\Desktop\NewDemos\1.ESFramework.Demos.Simplest\1.ESFramework.Demos.Simplest\RapidEngineDemo.Core\obj\Debug\ESFramework.Demos.Simplest.Core.pdb
+C:\Users\david\Desktop\NewDemos\1.ESFramework.Demos.Simplest\1.ESFramework.Demos.Simplest\ESFramework.Demos.Simplest.Core\bin\Debug\ESFramework.Demos.Simplest.Core.dll
+C:\Users\david\Desktop\NewDemos\1.ESFramework.Demos.Simplest\1.ESFramework.Demos.Simplest\ESFramework.Demos.Simplest.Core\bin\Debug\ESFramework.Demos.Simplest.Core.pdb
+C:\Users\david\Desktop\NewDemos\1.ESFramework.Demos.Simplest\1.ESFramework.Demos.Simplest\ESFramework.Demos.Simplest.Core\bin\Debug\ESBasic.dll
+C:\Users\david\Desktop\NewDemos\1.ESFramework.Demos.Simplest\1.ESFramework.Demos.Simplest\ESFramework.Demos.Simplest.Core\bin\Debug\ESFramework.dll
+C:\Users\david\Desktop\NewDemos\1.ESFramework.Demos.Simplest\1.ESFramework.Demos.Simplest\ESFramework.Demos.Simplest.Core\bin\Debug\ESPlus.dll
+C:\Users\david\Desktop\NewDemos\1.ESFramework.Demos.Simplest\1.ESFramework.Demos.Simplest\ESFramework.Demos.Simplest.Core\bin\Debug\ESFramework.xml
+C:\Users\david\Desktop\NewDemos\1.ESFramework.Demos.Simplest\1.ESFramework.Demos.Simplest\ESFramework.Demos.Simplest.Core\bin\Debug\ESPlus.xml
+C:\Users\david\Desktop\NewDemos\1.ESFramework.Demos.Simplest\1.ESFramework.Demos.Simplest\ESFramework.Demos.Simplest.Core\bin\Debug\ESBasic.xml
+C:\Users\david\Desktop\NewDemos\1.ESFramework.Demos.Simplest\1.ESFramework.Demos.Simplest\ESFramework.Demos.Simplest.Core\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\david\Desktop\NewDemos\1.ESFramework.Demos.Simplest\1.ESFramework.Demos.Simplest\ESFramework.Demos.Simplest.Core\obj\Debug\ESFramework.Demos.Simplest.Core.dll
+C:\Users\david\Desktop\NewDemos\1.ESFramework.Demos.Simplest\1.ESFramework.Demos.Simplest\ESFramework.Demos.Simplest.Core\obj\Debug\ESFramework.Demos.Simplest.Core.pdb

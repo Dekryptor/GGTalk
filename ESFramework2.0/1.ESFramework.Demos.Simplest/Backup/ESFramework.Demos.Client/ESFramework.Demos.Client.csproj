@@ -1,0 +1,273 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2485FDDB-AB97-45CC-BD86-4CDC547A7CA6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ESFramework.Demos.Client</RootNamespace>
+    <AssemblyName>ESFramework.Demos.Client</AssemblyName>
+    <ApplicationIcon>64.ico</ApplicationIcon>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ESBasic, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dlls\ESBasic.dll</HintPath>
+    </Reference>
+    <Reference Include="ESFramework, Version=4.0.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dlls\ESFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\ChatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChatForm.Designer.cs">
+      <DependentUpon>ChatForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TextChatControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\TextChatControl.Designer.cs">
+      <DependentUpon>TextChatControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\ChatForm.resx">
+      <DependentUpon>ChatForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TextChatControl.resx">
+      <DependentUpon>TextChatControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="64.ico" />
+    <Content Include="bin\Debug\Face\1.gif" />
+    <Content Include="bin\Debug\Face\10.gif" />
+    <Content Include="bin\Debug\Face\100.gif" />
+    <Content Include="bin\Debug\Face\101.gif" />
+    <Content Include="bin\Debug\Face\102.gif" />
+    <Content Include="bin\Debug\Face\103.gif" />
+    <Content Include="bin\Debug\Face\104.gif" />
+    <Content Include="bin\Debug\Face\105.gif" />
+    <Content Include="bin\Debug\Face\106.gif" />
+    <Content Include="bin\Debug\Face\107.gif" />
+    <Content Include="bin\Debug\Face\108.gif" />
+    <Content Include="bin\Debug\Face\109.gif" />
+    <Content Include="bin\Debug\Face\11.gif" />
+    <Content Include="bin\Debug\Face\110.gif" />
+    <Content Include="bin\Debug\Face\111.gif" />
+    <Content Include="bin\Debug\Face\112.gif" />
+    <Content Include="bin\Debug\Face\113.gif" />
+    <Content Include="bin\Debug\Face\114.gif" />
+    <Content Include="bin\Debug\Face\115.gif" />
+    <Content Include="bin\Debug\Face\116.gif" />
+    <Content Include="bin\Debug\Face\117.gif" />
+    <Content Include="bin\Debug\Face\118.gif" />
+    <Content Include="bin\Debug\Face\119.gif" />
+    <Content Include="bin\Debug\Face\12.gif" />
+    <Content Include="bin\Debug\Face\120.gif" />
+    <Content Include="bin\Debug\Face\121.gif" />
+    <Content Include="bin\Debug\Face\122.gif" />
+    <Content Include="bin\Debug\Face\123.gif" />
+    <Content Include="bin\Debug\Face\124.gif" />
+    <Content Include="bin\Debug\Face\125.gif" />
+    <Content Include="bin\Debug\Face\126.gif" />
+    <Content Include="bin\Debug\Face\127.gif" />
+    <Content Include="bin\Debug\Face\128.gif" />
+    <Content Include="bin\Debug\Face\129.gif" />
+    <Content Include="bin\Debug\Face\13.gif" />
+    <Content Include="bin\Debug\Face\130.gif" />
+    <Content Include="bin\Debug\Face\131.gif" />
+    <Content Include="bin\Debug\Face\132.gif" />
+    <Content Include="bin\Debug\Face\133.gif" />
+    <Content Include="bin\Debug\Face\134.gif" />
+    <Content Include="bin\Debug\Face\135.gif" />
+    <Content Include="bin\Debug\Face\14.gif" />
+    <Content Include="bin\Debug\Face\15.gif" />
+    <Content Include="bin\Debug\Face\16.gif" />
+    <Content Include="bin\Debug\Face\17.gif" />
+    <Content Include="bin\Debug\Face\18.gif" />
+    <Content Include="bin\Debug\Face\19.gif" />
+    <Content Include="bin\Debug\Face\2.gif" />
+    <Content Include="bin\Debug\Face\20.gif" />
+    <Content Include="bin\Debug\Face\21.gif" />
+    <Content Include="bin\Debug\Face\22.gif" />
+    <Content Include="bin\Debug\Face\23.gif" />
+    <Content Include="bin\Debug\Face\24.gif" />
+    <Content Include="bin\Debug\Face\25.gif" />
+    <Content Include="bin\Debug\Face\26.gif" />
+    <Content Include="bin\Debug\Face\27.gif" />
+    <Content Include="bin\Debug\Face\28.gif" />
+    <Content Include="bin\Debug\Face\29.gif" />
+    <Content Include="bin\Debug\Face\3.gif" />
+    <Content Include="bin\Debug\Face\30.gif" />
+    <Content Include="bin\Debug\Face\31.gif" />
+    <Content Include="bin\Debug\Face\32.gif" />
+    <Content Include="bin\Debug\Face\33.gif" />
+    <Content Include="bin\Debug\Face\34.gif" />
+    <Content Include="bin\Debug\Face\35.gif" />
+    <Content Include="bin\Debug\Face\36.gif" />
+    <Content Include="bin\Debug\Face\37.gif" />
+    <Content Include="bin\Debug\Face\38.gif" />
+    <Content Include="bin\Debug\Face\39.gif" />
+    <Content Include="bin\Debug\Face\4.gif" />
+    <Content Include="bin\Debug\Face\40.gif" />
+    <Content Include="bin\Debug\Face\41.gif" />
+    <Content Include="bin\Debug\Face\42.gif" />
+    <Content Include="bin\Debug\Face\43.gif" />
+    <Content Include="bin\Debug\Face\44.gif" />
+    <Content Include="bin\Debug\Face\45.gif" />
+    <Content Include="bin\Debug\Face\46.gif" />
+    <Content Include="bin\Debug\Face\47.gif" />
+    <Content Include="bin\Debug\Face\48.gif" />
+    <Content Include="bin\Debug\Face\49.gif" />
+    <Content Include="bin\Debug\Face\5.gif" />
+    <Content Include="bin\Debug\Face\50.gif" />
+    <Content Include="bin\Debug\Face\51.gif" />
+    <Content Include="bin\Debug\Face\52.gif" />
+    <Content Include="bin\Debug\Face\53.gif" />
+    <Content Include="bin\Debug\Face\54.gif" />
+    <Content Include="bin\Debug\Face\55.gif" />
+    <Content Include="bin\Debug\Face\56.gif" />
+    <Content Include="bin\Debug\Face\57.gif" />
+    <Content Include="bin\Debug\Face\58.gif" />
+    <Content Include="bin\Debug\Face\59.gif" />
+    <Content Include="bin\Debug\Face\6.gif" />
+    <Content Include="bin\Debug\Face\60.gif" />
+    <Content Include="bin\Debug\Face\61.gif" />
+    <Content Include="bin\Debug\Face\62.gif" />
+    <Content Include="bin\Debug\Face\63.gif" />
+    <Content Include="bin\Debug\Face\64.gif" />
+    <Content Include="bin\Debug\Face\65.gif" />
+    <Content Include="bin\Debug\Face\66.gif" />
+    <Content Include="bin\Debug\Face\67.gif" />
+    <Content Include="bin\Debug\Face\68.gif" />
+    <Content Include="bin\Debug\Face\69.gif" />
+    <Content Include="bin\Debug\Face\7.gif" />
+    <Content Include="bin\Debug\Face\70.gif" />
+    <Content Include="bin\Debug\Face\71.gif" />
+    <Content Include="bin\Debug\Face\72.gif" />
+    <Content Include="bin\Debug\Face\73.gif" />
+    <Content Include="bin\Debug\Face\74.gif" />
+    <Content Include="bin\Debug\Face\75.gif" />
+    <Content Include="bin\Debug\Face\76.gif" />
+    <Content Include="bin\Debug\Face\77.gif" />
+    <Content Include="bin\Debug\Face\78.gif" />
+    <Content Include="bin\Debug\Face\79.gif" />
+    <Content Include="bin\Debug\Face\8.gif" />
+    <Content Include="bin\Debug\Face\80.gif" />
+    <Content Include="bin\Debug\Face\81.gif" />
+    <Content Include="bin\Debug\Face\82.gif" />
+    <Content Include="bin\Debug\Face\83.gif" />
+    <Content Include="bin\Debug\Face\84.gif" />
+    <Content Include="bin\Debug\Face\85.gif" />
+    <Content Include="bin\Debug\Face\86.gif" />
+    <Content Include="bin\Debug\Face\87.gif" />
+    <Content Include="bin\Debug\Face\88.gif" />
+    <Content Include="bin\Debug\Face\89.gif" />
+    <Content Include="bin\Debug\Face\9.gif" />
+    <Content Include="bin\Debug\Face\90.gif" />
+    <Content Include="bin\Debug\Face\91.gif" />
+    <Content Include="bin\Debug\Face\92.gif" />
+    <Content Include="bin\Debug\Face\93.gif" />
+    <Content Include="bin\Debug\Face\94.gif" />
+    <Content Include="bin\Debug\Face\95.gif" />
+    <Content Include="bin\Debug\Face\96.gif" />
+    <Content Include="bin\Debug\Face\97.gif" />
+    <Content Include="bin\Debug\Face\98.gif" />
+    <Content Include="bin\Debug\Face\99.gif" />
+    <Content Include="Resources\MinIcons_003.png" />
+    <Content Include="Resources\MinIcons_008.png" />
+    <Content Include="Resources\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ESFramework.Demos.Core\ESFramework.Demos.Core.csproj">
+      <Project>{536C0FDA-8B98-48C6-9445-8BB02967E654}</Project>
+      <Name>ESFramework.Demos.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="宋体" Size="9" />
+  <Class Name="ESFramework.Core.ProcesserBag">
+    <Position X="6.25" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>Core\ProcesserFactory\ProcesserBag.cs</FileName>
+      <HashCode>AAAAAAAAAAAgAAAAIAAgAAAAABAACCAAAAAgAAgYIAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="ESFramework.Core.ProcesserFactory">
+    <Position X="2.75" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Core\ProcesserFactory\ProcesserFactory.cs</FileName>
+      <HashCode>AAAAAAAAAAAAACAQAAAgAAAAAAQAAAAAQAAgAAAAIAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="processerBagList" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ESFramework.Core.SingleProcesserFactory">
+    <Position X="2.75" Y="5.75" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>Core\ProcesserFactory\SingleProcesserFactory.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAQAAAgAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ESFramework.Core.AddinProcesserFactory">
+    <Position X="0.5" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Core\ProcesserFactory\AddinProcesserFactory.cs</FileName>
+      <HashCode>AQAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="addinManagement" />
+    </ShowAsAssociation>
+    <AssociationLine Name="addinManagement" Type="ESBasic.Addins.IAddinManagement">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.388" Y="0.214" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ESFramework.Core.SelectiveProcesser">
+    <Position X="6.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Core\Processer\SelectiveProcesser.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAgAAAAIAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="ESFramework.Core.IBasicProcesser">
+    <Position X="2.75" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>Core\Processer\IBasicProcesser.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAABCAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ESFramework.Core.IMessageProcesser">
+    <Position X="0.5" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Core\Processer\IMessageProcesser.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ESFramework.Core.IProcesserFactory">
+    <Position X="0.5" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Core\ProcesserFactory\IProcesserFactory.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ESBasic.Addins.IAddinManagement" Collapsed="true">
+    <Position X="0.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+</ClassDiagram>

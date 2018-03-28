@@ -1,0 +1,6 @@
+F:\Git\ESFramework2.0源码和Demo\ESFramework2\bin\Debug\ESFramework.dll
+F:\Git\ESFramework2.0源码和Demo\ESFramework2\bin\Debug\ESFramework.pdb
+F:\Git\ESFramework2.0源码和Demo\ESFramework2\obj\Debug\ESFramework.csprojResolveAssemblyReference.cache
+F:\Git\ESFramework2.0源码和Demo\ESFramework2\obj\Debug\ESFramework.csproj.CoreCompileInputs.cache
+F:\Git\ESFramework2.0源码和Demo\ESFramework2\obj\Debug\ESFramework.dll
+F:\Git\ESFramework2.0源码和Demo\ESFramework2\obj\Debug\ESFramework.pdb
